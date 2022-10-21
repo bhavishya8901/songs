@@ -34,8 +34,6 @@ masterPlay.addEventListener('click', ()=>{
 })
 const makeALLPlays = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-        element.classList.remove('fa-solid fa-pause')
-        element.classList.add('fa-solid fa-play')
     })
 
 }
@@ -43,10 +41,31 @@ const makeALLPlays = ()=>{
 element.addEventListener('click', (e)=>{
     makeALLPlays();
     index = parseInt(e.target.id);
-    e.target.classList.remove('fa-solid fa-play')
-    e.target.classList.add('fa-solid fa-pause')
-audioElement.src =  'songs/habibi.mp3';
+    e.target.classList.remove('fa-solidfa-play')
+    e.target.classList.add('fa-solidfa-pause')
+    audioElement.src = "songs/habibi.mp3" 
 audioElement.currentTime = 0;
 audioElement.play();
 })
+})
+document.getElementById(next).addEventListener('click', ()=>{
+if(songIndex>9){
+    songIndex = 0;
+}
+else{
+    songIndex += 1;
+}
+audioElement.src =  "songs/shab.mp3"
+audioElement.currentTime = 0;
+audioElement.play();
+})
+document.getElementById(0).addEventListener('click', ()=>{
+    audioElement.src =  "songs/money.mp3"
+audioElement.currentTime = 0;
+audioElement.play();
+})
+document.getElementById(1).addEventListener('click', ()=>{
+    audioElement.src =  "songs/shab.mp3"
+audioElement.currentTime = 0;
+audioElement.play();
 })
