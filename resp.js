@@ -43,7 +43,7 @@ element.addEventListener('click', (e)=>{
     index = parseInt(e.target.id);
     e.target.classList.remove('fa-solidfa-play')
     e.target.classList.add('fa-solidfa-pause')
-    audioElement.src = "songs/habibi.mp3" 
+    audioElement.src = "songs/bre.mp3" 
 audioElement.currentTime = 0;
 audioElement.play();
 })
