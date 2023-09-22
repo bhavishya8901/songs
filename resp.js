@@ -47,7 +47,7 @@ element.addEventListener('click', (e)=>{
 audioElement.currentTime = 0;
 audioElement.play();
 })
-})
+
 document.getElementById(next).addEventListener('click', ()=>{
 if(songIndex>9){
     songIndex = 0;
@@ -69,3 +69,4 @@ document.getElementById(1).addEventListener('click', ()=>{
 audioElement.currentTime = 0;
 audioElement.play();
 })
+   })
